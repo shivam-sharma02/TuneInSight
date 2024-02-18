@@ -1,0 +1,41 @@
+<a href="/admin/" class="btn btn-primary">Go to Admin</a>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    {% load static%}
+    <link rel="stylesheet" href="{% static 'style.css'%}">
+</head>
+
+<body>
+    <div class="video-container">
+        <video autoplay muted loop id="video-background">
+            <source src="{% static 'planet.mp4' %}" type="video/mp4">
+        </video>
+        <section class="register-section">
+            <h2>Register</h2>
+            <form method="POST" action="{% url 'process_form' %}">
+                {% csrf_token %}
+                <label for="username">Username:</label>
+                <input type="text" name="Username" id="" class="form-control" placeholder=" Username"
+                    aria-describedby="helpId" value="">
+
+                <label for="emailInputEmail1">Email:</label>
+                <input type="text" name="email" class="form-control" id="exampleInputEmail1"
+                    aria-describedby="emailHelp" placeholder="Enter email" value="">
+
+                <label for="">Link</label>
+                <input type="url" name="link" class="form-control" placeholder="Put Link">
+
+                <button type="submit" class="form-control">Register</button>
+            </form>
+        </section>
+    </div>
+    <script src="{% static 'index.js' %}"></script>
+
+
+</body>
+</html>

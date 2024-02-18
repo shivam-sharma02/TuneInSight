@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Results</title>
+</head>
+<body>
+    <h1>Prediction Results</h1>
+    <h2>User Information</h2>
+    <p><strong>Username:</strong> {{ username }}</p>
+    <p><strong>Email:</strong> {{ email }}</p>
+    <hr>
+    <h2>Playlist Information</h2>
+    <p><strong>Playlist Link:</strong> <a href="{{ playlist_link }}">{{ playlist_link }}</a></p>
+    <h3>Songs in Playlist:</h3>
+    <ul>
+        {% for song in playlist_songs %}
+            <li>{{ song }}</li>
+        {% endfor %}
+    </ul>
+    <hr>
+    <h2>Listening Preferences</h2>
+    <p><strong>Sad Songs:</strong> {{ sad_percentage }}%</p>
+    <p><strong>Happy Songs:</strong> {{ happy_percentage }}%</p>
+    <p><strong>Energetic Songs:</strong> {{ energetic_percentage }}%</p>
+    <p><strong>Calm Songs:</strong> {{ calm_percentage }}%</p>
+    <!-- Add more categories if needed -->
+    <hr>
+    <h2>Depression Prediction</h2>
+    <p><strong>Prediction:</strong> {% if depressed %}Depressed{% else %}Not Depressed{% endif %}</p>
+</body>
+</html>
