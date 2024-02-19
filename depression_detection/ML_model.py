@@ -5,7 +5,7 @@ import math
 import operator
 
 
-data = pd.read_csv(r'C:\Users\shiva\Desktop\Depression_Detection-main\DA\depression_detection\training_data.csv')
+data = pd.read_csv('home/projectTuneIn/projectTuneIn/depression_detection/training_data.csv')
 
 # Defining a function which calculates euclidean distance between two data points
 def euclideanDistance(data1, data2, length): # individually weighting the chosen parameters
